@@ -3,6 +3,8 @@ package com.apps.frontend.ra.steps;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
+
 import com.apps.frontend.ra.pages.AnswersPage;
 import com.apps.frontend.ra.pages.ListContainerPage;
 import com.apps.frontend.ra.pages.QuestionnairePage;
@@ -57,5 +59,11 @@ public class ReactAppSteps extends ScenarioSteps{
 	//html report
 	public Map<String, List<String>>  grabRowsData() {
 		return listContainerPage.grabRowsData();
+	}
+	
+	@Step
+	public void verifySubmitMessage(String expectedMessage, String actualMessage) {
+		Assert.assertTrue("Failure: message not as expected. Expected: " + expectedMessage + " - Actual: " + actualMessage, actualMessage.contains(expectedMessage));
+
 	}
 }
