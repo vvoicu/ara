@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,7 +30,8 @@ public class TC001CalculateListsTest {
     
     public String baseUrl;
 	public List<String> testList= new ArrayList<String>();
-    
+    public String expectedMessage;
+	
     @Before
     public void dataSetup() {
     	baseUrl = Constants.BASE_URL;
@@ -42,6 +44,8 @@ public class TC001CalculateListsTest {
     	testList.add("24");
     	testList.add("36");
     	testList.add("2");
+    	
+    	expectedMessage = "success";
     }
     
     @Test
@@ -60,5 +64,11 @@ public class TC001CalculateListsTest {
     	
     	reactAppSteps.inputAllAnswers(answers);
     	reactAppSteps.clickSubmitAnswers();
-    }
+    	
+    	String actualMessage = reactAppSteps.grabSubmitMessage();
+    	
+    	System.out.println("Actual submit message: " + actualMessage);
+    	
+    	Assert.assertTrue("Failure: message not as expected. Expected: " + expectedMessage + " - Actual: " + actualMessage, actualMessage.contains(expectedMessage));
+    } 
 }

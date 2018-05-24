@@ -6,6 +6,7 @@ import java.util.Map;
 import com.apps.frontend.ra.pages.AnswersPage;
 import com.apps.frontend.ra.pages.ListContainerPage;
 import com.apps.frontend.ra.pages.QuestionnairePage;
+import com.apps.frontend.ra.pages.SubmitMessagePage;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
@@ -17,9 +18,8 @@ public class ReactAppSteps extends ScenarioSteps{
 	QuestionnairePage questionnairePage;
 	ListContainerPage listContainerPage;
 	AnswersPage answersPage;
+	SubmitMessagePage submitMessagePage;
 	
-	
-
 	@Step
 	public void navigateTo(String baseUrl) {
 		getDriver().get(baseUrl);
@@ -30,15 +30,7 @@ public class ReactAppSteps extends ScenarioSteps{
 		questionnairePage.clickOnRenderTheChallengeButton();
 		
 	}
-	
-	/**
-	 * Grab data as Map of Lists
-	 */
-	//Method does not have a @Step annotation because we dont want it in the final
-	//html report
-	public Map<String, List<String>>  grabRowsData() {
-		return listContainerPage.grabRowsData();
-	}
+
 	
 	@Step
 	public void inputAllAnswers(List<String> answers) {
@@ -49,6 +41,21 @@ public class ReactAppSteps extends ScenarioSteps{
 	public void clickSubmitAnswers() {
 		answersPage.clickSubmitAnswers();		
 	}
-
-
+	
+	/**
+	 * Extract message after form submit.
+	 * @return
+	 */
+	public String grabSubmitMessage() {
+		return submitMessagePage.grabSubmitMessage();
+	}
+	
+	/**
+	 * Grab data as Map of Lists
+	 */
+	//Method does not have a @Step annotation because we dont want it in the final
+	//html report
+	public Map<String, List<String>>  grabRowsData() {
+		return listContainerPage.grabRowsData();
+	}
 }
