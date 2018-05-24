@@ -1,5 +1,6 @@
 {
   "name": "custom-tech-test",
+  "homepage" : "http://vvoicu.github.io/ara",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
