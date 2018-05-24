@@ -28,12 +28,12 @@ public class ListCalculator {
 		return results;
 	}
 
-	// if(currentDataList.size() > 0) {
-	// for (String valueNow : currentDataList) {
-	// frontSum += Integer.valueOf(valueNow);
-	// backSum +=Integer.valueOf(currentDataList.get(index--));
-	// if
-	// }
+
+	/**
+	 * return the middle list index or null
+	 * @param currentDataList
+	 * @return
+	 */
 	private static String calculateRowMiddle(List<String> currentDataList) {
 		System.out.println("===============================================");
 		System.out.println(currentDataList);

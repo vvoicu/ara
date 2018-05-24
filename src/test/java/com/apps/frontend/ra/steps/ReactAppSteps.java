@@ -3,6 +3,7 @@ package com.apps.frontend.ra.steps;
 import java.util.List;
 import java.util.Map;
 
+import com.apps.frontend.ra.pages.AnswersPage;
 import com.apps.frontend.ra.pages.ListContainerPage;
 import com.apps.frontend.ra.pages.QuestionnairePage;
 
@@ -15,6 +16,8 @@ public class ReactAppSteps extends ScenarioSteps{
 	
 	QuestionnairePage questionnairePage;
 	ListContainerPage listContainerPage;
+	AnswersPage answersPage;
+	
 	
 
 	@Step
@@ -35,6 +38,16 @@ public class ReactAppSteps extends ScenarioSteps{
 	//html report
 	public Map<String, List<String>>  grabRowsData() {
 		return listContainerPage.grabRowsData();
+	}
+	
+	@Step
+	public void inputAllAnswers(List<String> answers) {
+		answersPage.inputAllAnswers(answers);
+	}
+
+	@Step
+	public void clickSubmitAnswers() {
+		answersPage.clickSubmitAnswers();		
 	}
 
 

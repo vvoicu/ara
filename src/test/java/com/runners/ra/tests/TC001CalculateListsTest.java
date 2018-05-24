@@ -33,6 +33,7 @@ public class TC001CalculateListsTest {
     @Before
     public void dataSetup() {
     	baseUrl = Constants.BASE_URL;
+    	//add test data from example
     	testList.add("10");
     	testList.add("15");
     	testList.add("5");
@@ -49,10 +50,15 @@ public class TC001CalculateListsTest {
     	reactAppSteps.moveToQuestion();
     	Map<String, List<String>> mapList = reactAppSteps.grabRowsData();
     	
-    	PrintUtils.printMapList(mapList);
-//    	[10, 15, 5, 7, 1, 24, 36, 2]
+//    	test list - [10, 15, 5, 7, 1, 24, 36, 2]
     	mapList.put("x", testList);
     	
-    	ListCalculator.calculateAnswers(mapList);
+
+    	PrintUtils.printMapList(mapList);
+    	
+    	List<String> answers = ListCalculator.calculateAnswers(mapList);
+    	
+    	reactAppSteps.inputAllAnswers(answers);
+    	reactAppSteps.clickSubmitAnswers();
     }
 }

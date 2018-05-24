@@ -12,6 +12,7 @@ import com.tools.AbstractPage;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 
+
 public class ListContainerPage extends AbstractPage {
 
 	@FindBy(css = ".challenge > div > div:nth-child(7)")
