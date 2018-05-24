@@ -8,23 +8,14 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Serenity project with JUnit and WebDriver</name>
-
-	<repositories>
-		<repository>
-			<id>ailis-releases</id>
-			<name>Ailis Maven Releases</name>
-			<url>http://nexus.ailis.de/content/groups/public/</url>
-		</repository>
-	</repositories>
+    <name>CES Digital - Serenity project with JUnit and WebDriver</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<serenity.version>1.8.2</serenity.version>
 		<webdriver.driver>chrome</webdriver.driver>
-		<testSuite>*TC001CalculateListsTest</testSuite>
-		<configFile>qa</configFile>
+		<testSuite>TC001CalculateListsTest</testSuite>
 		<parallelTests>2</parallelTests>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>

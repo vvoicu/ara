@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ECSD Tech Test
 Welcome to the ECSD Tech Test 
 
@@ -40,3 +41,26 @@ Good Luck!
 [docker]: https://www.docker.com/
 [node]: https://nodejs.org/en/
 [yarn]: https://yarnpkg.com/en/
+=======
+<h1> ARA <h1>
+
+<h3> Prerequisite </h3>
+
+> Java JDK 8 <br>
+> Maven <br>
+> Firefox or Chrome <br>
+ 
+<h3> Run command <h3>
+
+<a>run commands in the project root (where the pom.xml file is located) </a> 
+<br>
+	
+ <b>Run single test: </b>
+>mvn -Dwebdriver.driver=firefox -DtestSuite=TC001CalculateListsTest verify <br>
+ 
+ <b>Generate reports:</b>
+>mvn serenity:aggregate
+
+ <b>View Reports: </b>`<br>
+> /target/site/serenity/index.html
+>>>>>>> 1a0d806d08c92a22d96b6db1b026aca517b86654
