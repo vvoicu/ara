@@ -1,4 +1,4 @@
-# ara
+<h1> ARA <h1>
 
 <h3> Prerequisite </h3>
 
@@ -7,13 +7,15 @@
 > Firefox or Chrome <br>
  
 <h3> Run command <h3>
-	* run commands in the project root (where the pom.xml file is located) <br>
-	<br>
- Run single test:
+
+<a>run commands in the project root (where the pom.xml file is located) </a> 
+<br>
+	
+ <b>Run single test: </b>
 >mvn -Dwebdriver.driver=firefox -DtestSuite=TC001CalculateListsTest verify <br>
  
- Generate reports:
+ <b>Generate reports:</b>
 >mvn serenity:aggregate
 
- View Reports: <br>
+ <b>View Reports: </b>`<br>
 > /target/site/serenity/index.html
