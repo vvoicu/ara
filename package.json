@@ -1,6 +1,6 @@
 {
   "name": "custom-tech-test",
-  "homepage" : "http://vvoicu.github.io/ara",
+  "homepage" : "https://github.com/vvoicu/ara",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,6 +20,7 @@
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint src/* --fix"
   },
+
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",

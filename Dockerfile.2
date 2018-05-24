@@ -1,0 +1,15 @@
+FROM maven:slim
+
+ENV GAK_KEY=none
+
+ARG webdriver.remote.url=http://localhost:4444/wd/hub
+ARG testSuite=TC001CalculateListsTest
+
+COPY . /app
+
+WORKDIR /app/
+
+RUN mvn -T 8 clean install -DskipTests \
+	&& mvn -DskipTests=true -Dmaven.test.skip=true install dependency:copy-dependencies 
+
+ENTRYPOINT ["mvn", "-DtestSuite=${testSuite}", "-Dwebdriver.remote.url=${webdriver.remote.url}", "-Dwebdriver.driver=chrome", "verify"]

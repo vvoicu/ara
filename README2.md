@@ -17,3 +17,17 @@
 
  View Reports: <br>
 > /target/site/serenity/index.html
+
+
+Build the docker image: <br>
+ <br>
+
+>docker build -t timage -f Dockerfile.2 . <br>
+
+Run the docker image: <br>
+ <br>
+
+>docker run -v /Users/USERNAME/Documents/dockerizer/volumemount:/app/target timage <br>
+
+
+>docker run timage <br>
