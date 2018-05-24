@@ -1,6 +1,6 @@
 {
   "name": "custom-tech-test",
-  "homepage" : "https://github.com/vvoicu/ara",
+  "homepage" : "https://vvoicu.github.com/ara",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,10 +15,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --path /",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint src/* --fix"
+      
   },
 
   "devDependencies": {
