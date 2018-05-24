@@ -7,7 +7,7 @@ import logo from '../logo.png';
 
 const paperStyle = {
   padding: 20,
-  height: 6000,
+  height: 600,
   margin: 20,
   alignItems: 'center',
   textAlign: 'center',
